@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href={% static 'lore/css/champion_details.css' %}>
+{% endblock css_files %}
+
+{% block title %}{{champion.title}}{% endblock title %}
+
+<div class="all-content">
+{% block content %}
+
+<div id="all-content">
+    <div id="champion-image">
+        <img src="{% static 'lore/images/champions_loading_screen/' %}{{champion.name}}_0.jpg" alt="">
+        <div id="champion-skills">
+
+            <div class="tooltip">
+                <img src="{% static 'lore/images/champions_spells/' %}{{champion.name}}Q.png" alt="">
+                <span class="tooltiptext">
+                    <h1>{{ability.Q_name}}</h1>
+                    <p>Cooldown {{ability.Q_cooldown}}</p>
+                    <p>{{ability.Q_description}}</p>
+                </span>
+                <div class="skill-label">Q</div>
+            </div>
+
+            <div class="tooltip">
+                <img src="{% static 'lore/images/champions_spells/' %}{{champion.name}}W.png" alt="">
+                <span class="tooltiptext">
+                    <h1>{{ability.W_name}}</h1>
+                    <p>Cooldown {{ability.W_cooldown}}</p>
+                    <p>{{ability.W_description}}</p>
+                </span>
+                <div class="skill-label">W</div>
+            </div>
+
+            <div class="tooltip">
+                <img src="{% static 'lore/images/champions_spells/' %}{{champion.name}}E.png" alt="">
+                <span class="tooltiptext">
+                    <h1>{{ability.E_name}}</h1>
+                    <p>Cooldown {{ability.E_cooldown}}</p>
+                    <p>{{ability.E_description}}</p>
+                </span>
+                <div class="skill-label">E</div>
+
+            </div>
+
+            <div class="tooltip">
+                <img src="{% static 'lore/images/champions_spells/' %}{{champion.name}}R.png" alt="">
+                <span class="tooltiptext">
+                    <h1>{{ability.R_name}}</h1>
+                    <p>Cooldown {{ability.R_cooldown}}</p>
+                    <p>{{ability.R_description}}</p>
+                </span>
+                <div class="skill-label">R</div>
+            </div>
+            
+
+        
+        </div>
+    </div>
+
+    <div id="name-stats">
+        <h1>{{champion.name}}</h1>
+    
+
+    <div id="stats">
+        <div id="stats-base">
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Health_icon.webp' %} alt="">
+                Health points: {{champion.stats.hp}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Mana_icon.webp' %} alt="">
+                Mana points: {{champion.stats.mp}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Mana_icon.webp' %} alt="">
+                Mana type: {{champion.partype}}
+            </div>
+            
+            
+            
+        </div>
+        <div id="attack-stats">
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Attack_damage_icon.webp' %} alt="">
+                Attack damage: {{champion.stats.attack_damage}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Attack_speed_icon.webp' %} alt="">
+                Attack speed: {{champion.stats.attack_speed}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Mana_icon.webp' %} alt="">
+                Movespeed: {{champion.stats.move_speed}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Armor_icon.webp' %} alt="">
+                Armor: {{champion.stats.armor}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Magic_resistance_icon.webp' %} alt="">
+                Magic resistance: {{champion.stats.spell_block}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Attack_damage_icon.webp' %} alt="">
+                Attack range: {{champion.stats.attack_range}}
+            </div>
+            
+            
+            
+        </div>
+        <div id="regen">
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Health_icon.webp' %} alt="">
+                Hp regen per/s: {{champion.stats.hp_regen}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Mana_icon.webp' %} alt="">
+                Mp regen per/s: {{champion.stats.mp_regen}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Health_icon.webp' %} alt="">
+                Hp regen per/s per/level: {{champion.stats.hp_regen_per_level}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Mana_icon.webp' %} alt="">
+                Mp regen per/s per/level: {{champion.stats.mp_regen_per_level}}
+            </div>
+
+
+        </div>
+        <div id="per-level">
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Health_icon.webp' %} alt="">
+                Hp per/level: {{champion.stats.hp_per_level}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Mana_icon.webp' %} alt="">
+                Mp per/level: {{champion.stats.mp_per_level}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Armor_icon.webp' %} alt="">
+                Armor per/level: {{champion.stats.armor_per_level}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Magic_resistance_icon.webp' %} alt="">
+                Magic resistance per/level: {{champion.stats.spell_block_per_level}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Attack_damage_icon.webp' %} alt="">
+                Attack damage per/level: {{champion.stats.attack_damage_per_level}}
+            </div>
+            <div id="stats-basic">
+                <img src={% static 'lore/images/stats_icons/Attack_speed_icon.webp' %} alt="">
+                Attack speed per/level: {{champion.stats.attack_speed_per_level}}
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <h1>Lore</h1>
+    <div id="lore">
+        {{champion.lore}}
+    </div>
+
+    <h1>Tips as {{champion.name}}</h1>
+    <div class="tips">
+        {% for tip in allytips %}
+        {{tip}}
+        {% endfor %}
+        
+    </div>
+
+    <h1>Tips against {{champion.name}}</h1>
+    <div class="tips">
+        {% for tip in enemytips %}
+        {{tip}}
+        {% endfor %}
+
+    </div>
+</div>
+</div>
+
+{% endblock content %}
+</div>

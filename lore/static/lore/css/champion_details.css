@@ -1,0 +1,133 @@
+body {
+    margin-top: 7rem;
+    background-color: #111318;
+    color: white;
+}
+
+h1{
+    color: white;
+
+    
+}
+
+#name-stats h1 {
+    -webkit-text-stroke: 1px rgb(105, 105, 105);
+    padding: 0 1rem;
+}
+
+#all-content{
+    display: flex;
+    width: 60%;
+    margin: 0rem auto;
+    font-size: 0.7rem;
+    background-color:black;
+    border: 1px solid rgb(80, 61, 12);
+
+
+
+}
+
+
+#champion-image img{
+    border: 1px solid rgb(80, 61, 12);
+}
+
+#stats {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(80, 61, 12);
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    
+}
+
+#stats-base{
+    display: block;
+}
+
+#stats-basic{
+    padding: 0.1rem;    
+}
+
+#stats-basic img{
+    height: 0.7rem;
+    width: 0.7rem;
+}
+
+#name-stats{
+    width: 100%;
+}
+
+
+#champion-skills{
+display: flex;
+margin-left: 1.5rem;
+
+}
+
+#champion-skills img {
+    border: 1px solid rgb(80, 61, 12);
+align-items: center;
+
+
+    
+}
+
+.tooltip{
+
+    position: relative;
+    display: inline-block;
+
+    
+}
+
+.tooltiptext{
+    visibility: hidden;
+    width: 15rem;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    border: 1px solid rgb(0, 4, 49);
+    position: absolute;
+    z-index: 1;
+    top: 3.5rem;
+    left: -130%;
+
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+
+#lore{
+    padding: 1rem;
+    color: white;
+    text-align: left;
+    border-bottom: 1px solid rgb(80, 61, 12);
+
+}
+.tips{
+    padding: 1rem;
+    border-bottom: 1px solid rgb(80, 61, 12);
+}
+
+.tips:last-child {
+    border: none;
+}
+
+.skill-label {
+    position: absolute;
+    bottom: -5%;
+    Left: 40%;
+    border-radius: 50%;
+    border-bottom: 1px solid rgb(80, 61, 12);
+    background-color: rgb(102, 77, 15);
+    width: 14px;
+    height: 14px;
+    text-align: center;
+
+}

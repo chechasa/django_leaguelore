@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href={% static 'lore/css/index.css' %}>
+{% endblock css_files %}
+{% block title %}Welcome to LeagueLore{% endblock title %}
+
+{% block content %}
+<section class="champions_profile">
+    <ul>
+        {% for champ in champions %}
+        <a id="parents" href="{% url 'champion-details' champ.slug%}">
+        <li>
+            
+                <img class="img1" src="{% static 'lore/images/champions_profile_image/' %}{{champ.name}}.png">
+                <h5>{{champ.name}}</h5>
+            
+        </li>
+    </a>
+        {% endfor %}
+    </ul>
+</section>
+<ul></ul>
+
+{% endblock content %}
